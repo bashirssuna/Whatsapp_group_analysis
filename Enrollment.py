@@ -1,7 +1,8 @@
 import re
 import pandas as pd
 
-chat_file = "D:\ACADEMIA\Research\Yerusa\WhatsApp Chat with KYC.txt"
+chat_file = "D:\ACADEMIA\Research\Yerusa\WhatsApp Chat with KYC.txt" # Replace with your chat file path
+df = analyze_whatsapp_chat(chat_file)
 
 def analyze_whatsapp_chat(chat_file):
     """Analyzes a WhatsApp group chat exported as a .txt file."""
@@ -47,12 +48,10 @@ def analyze_whatsapp_chat(chat_file):
 
     return pd.DataFrame(events)
 
-# Example usage
-chat_file = "D:\ACADEMIA\Research\Yerusa\WhatsApp Chat with KYC.txt"  # Replace with your chat file path
 df = analyze_whatsapp_chat(chat_file)
 
 # Display the resulting DataFrame
 print(df)
 
 # Save results to a CSV file (optional)
-df.to_csv('KYC_one.csv', index=False) 
+df.to_csv('KYC_one.csv', index=False) #save the output to csv file
